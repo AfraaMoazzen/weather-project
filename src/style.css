@@ -1,0 +1,11 @@
+h1 {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-danger {
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(130, 172, 158);
+  border-color: rgb(26, 53, 56);
+}
