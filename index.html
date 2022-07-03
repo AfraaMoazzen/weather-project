@@ -4,102 +4,65 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="src/style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Project!</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="src/style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ 
   </head>
   <body>
-    <div class="jumbotron">
-   <nav class="navbar navbar-light bg-light">
-         <form id="search-form">
-        <input type="text" id="city-input" placeholder="Enter a city name">
-        <input type="submit" value="Search">
-      </form>
-
-          <div class="btn-group">
-            <button
-              type="button"
-              class="btn btn-danger dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              My Locations
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city name"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong> <span class="units"> <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  
+                  ><span class="units"> °C </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                
+              </ul>
             </div>
           </div>
-        </form>
-      </nav>
-  <hr class="my-4">     
-      <h1>Paris </h1>
-      <h2 id = "time"> date </h2>
-      <h3>24°C</h3>
-      <hr class="my-4">
-<h4>
-    Next 4 Days
-</h4>
-<div class="row">
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Monday</h5>
-        <p class="card-text">Sunny
-            <br> 25°C
-        </p>
-        <a href="#" class="btn btn-primary">See Details</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Tuesday</h5>
-        <p class="card-text">Cloudy
-             <br> 20°C
-        </p>
-        <a href="#" class="btn btn-primary">See Details</a>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Wednesday</h5>
-        <p class="card-text">Rainy
-             <br> 17°C
-        </p>
-        <a href="#" class="btn btn-primary">See Details</a>
-      </div>
-    </div>
-  </div>
-   <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Thursday</h5>
-        <p class="card-text">Thunderstorm
-             <br> 14°C
-        </p>
-        <a href="#" class="btn btn-primary">See Details</a>
-      </div>
-    </div>
-  </div>
-  
-</div>
-    </div>
-   
-    </div>
+        </div>
+
         <a id="afraa" href="https://github.com/AfraaMoazzen/weather-project"> Code by Afraa </a>
 
     <script src="src/js-data-types.js">
